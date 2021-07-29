@@ -1,38 +1,220 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 52px;
+  padding-top: 25px;
+}
+.Width {
+  width: 100%;
+  height: auto;
+}
+li {
+  list-style: none;
+}
+.d-flex {
+  flex-wrap: wrap;
+  display: flex;
+}
+.MuiCardActions-root {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.border-bottom {
+  border-bottom: double;
+}
+.PrdSec {
+  padding-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.quantity-width {
+  width: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-icons {
+  position: relative;
 }
+
+.nav-icons::before {
+  content: "";
+  position: absolute;
+  background: #e7e7e7 none repeat scroll 0 0;
+  top: 50%;
+  left: 0;
+  height: 30px;
+  width: 1px;
+  margin-top: -15px;
+}
+.nav-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 17px;
+}
+
+.nav-icons ul .nav-item .dropdown-toggle::after {
+  display: none;
+}
+
+.nav-icons ul .nav-item:hover .dropdown-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.nav-icons ul .nav-item .nav-link {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.nav-icons ul .nav-item .nav-link .badge {
+  background: rgb(247, 244, 244);
+color: rgb(41, 41, 19);
+position: absolute;
+border-radius: 50px;
+min-width: 15px;
+height: 15px;
+font-size: 15px;
+padding: 0px;
+right: -11px;
+line-height: 15px;
+top: -4px;
+}
+
+.nav-icons ul .nav-item .nav-link .img-profile {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell {
+  padding-top: 10px;
+  color: #666666;
+}
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height: 39px;
+  padding-bottom: 8px;
+  background: #e8e8e8;
+  border: none;
+}
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  padding: 6px 1rem;
+  font-size: 0.85rem;
+  white-space: normal;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: #212529;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav {
+  list-style: none;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .dropdown-toggle::after {
+  display: none;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .nav-link {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .nav-link .badge {
+  background: rgb(247, 244, 244);
+color: rgb(41, 41, 19);
+position: absolute;
+border-radius: 50px;
+min-width: 15px;
+height: 15px;
+font-size: 15px;
+padding: 0px;
+right: -11px;
+line-height: 15px;
+top: -4px;
+}
+
+
+.nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .nav-link .fa-bell {
+  padding-top: 10px;
+}
+
+ .nav-icons ul .nav-item .nav-link .fa-bell #login .sb-topnav .navbar-nav .nav-item .dropdown-list {
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 20rem !important;
+}
+
+.nav-item .dropdown-list .dropdown-item {
+  white-space: normal;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  line-height: 1.3rem;
+}
+
+
+
+ .nav-item .dropdown-menu {
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 25rem !important;
+  display: none;
+  background: #ffffff;
+  border-radius: 0px;
+  margin: 0;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1) !important;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+
+
+.dropdown-menu .dropdown-item {
+  padding: 6px 1rem;
+  font-size: 0.85rem;
+  white-space: normal;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  line-height: 1.3rem;
+  font-weight: 400;
+  color: #212529;
+}
+

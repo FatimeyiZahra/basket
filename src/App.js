@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"; //rafce
+import { Data } from "./Data";
+import Products from "./Products";
+import Navi from "./Navi";
+import "./App.css";
+import alertify from "alertifyjs";
 
-function App() {
+
+const App = () => {
+  const [product] = useState(Data);
+  const [basket, setBasket] = useState([]);
+
+  const AddToCart = (prd) => {
+    let newBasket = basket;
+    var addedProduct = newBasket.find((c) => c.product.id === prd.id);
+    if (addedProduct) {
+      addedProduct.quantity += 1;
+    } else {
+      newBasket.push({ product: prd, quantity: 1 });
+    }
+    setBasket(newBasket);
+    alertify.success(prd.name + " added to cart!");
+
+  };
+  const RemoveFromCart = (bst) => {
+    let newBasket = basket.filter(c => c.product.id !== bst.id);
+    setBasket(newBasket);
+    alertify.error(bst.name + " removed from cart!");
+
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="PrdSec">
+      <Navi basket={basket} remove={RemoveFromCart} />
+
+      <Products product={product} addtocart={AddToCart} />
     </div>
   );
-}
+};
 
 export default App;
